@@ -12,6 +12,7 @@ const NavBar = function (props) {
             <Form.Control
               style={{ backdropFilter: "blur(10px)" }}
               type="text"
+              size="lg"
               placeholder="Che tempo fa li?"
               className=" mr-sm-2 w-100 bg-primary bg-opacity-25 border-1 border-light"
               value={search}
