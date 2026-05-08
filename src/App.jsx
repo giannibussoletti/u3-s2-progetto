@@ -59,6 +59,9 @@ const App = function () {
 
   return (
     <div className="px-4 my-4">
+      <h1 className="text-center mb-3 fw-bold" style={{ fontSize: "3rem" }}>
+        {actualWeather.name.toUpperCase()}
+      </h1>
       <WeekWeather today={actualWeather} forecast={weekWeather} />
       <NavBar setCity={setCity} todayWeather={fetchingToday} nextDaysWeather={fetchingWeek} />
       {console.log(city)}
