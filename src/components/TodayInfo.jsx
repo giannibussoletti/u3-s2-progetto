@@ -5,6 +5,7 @@ const TodayInfo = function (props) {
   return (
     <Col>
       <FontAwesomeIcon
+        size="xl"
         className="d-block m-auto mb-2"
         icon={props.icon}
         style={{ color: "rgb(255, 255, 255)" }}

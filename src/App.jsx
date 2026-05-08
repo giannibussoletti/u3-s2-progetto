@@ -20,7 +20,9 @@ const App = function () {
   const [weekWeather, setWeekWeather] = useState()
 
   const fetchingToday = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},IT&appid=${API}units=metric`)
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},IT&appid=${API}units=metric&lang=it`,
+    )
       .then((response) => {
         if (response.ok) {
           return response.json()
@@ -59,9 +61,6 @@ const App = function () {
 
   return (
     <div className="p-4">
-      <h1 className="text-center mb-3" style={{ fontSize: "3rem" }}>
-        {actualWeather.name}
-      </h1>
       <WeekWeather today={actualWeather} forecast={weekWeather} />
       <NavBar setCity={setCity} todayWeather={fetchingToday} nextDaysWeather={fetchingWeek} />
     </div>

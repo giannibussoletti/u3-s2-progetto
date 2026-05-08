@@ -5,29 +5,22 @@ import TodayWeather from "./TodayWeather"
 
 const WeekWeather = function (props) {
   const month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Gennaio",
+    "Febbraio",
+    "Marzo",
+    "Aprile",
+    "Maggio",
+    "Giugno",
+    "Luglio",
+    "Agosto",
+    "Settembre",
+    "Ottobre",
+    "Novembre",
+    "Dicembre",
   ]
 
-  const hoursOfDay = [
-    "00:00:00",
-    "03:00:00",
-    "06:00:00",
-    "09:00:00",
-    "15:00:00",
-    "18:00:00",
-    "21:00:00",
-  ]
+  const hoursOfDayMorning = ["00:00:00", "03:00:00", "06:00:00", "09:00:00"]
+  const hoursOfDayEvening = ["15:00:00", "18:00:00", "21:00:00"]
 
   const numberOfDays = [1, 2, 3]
 
@@ -58,22 +51,30 @@ const WeekWeather = function (props) {
         actualYear={actualYear}
         today={props.today}
       />
-      <Container>
+      <Container className="p-0">
         {numberOfDays.map((Singleday) => {
           return (
-            <Row className="gap-2 mt-3 justify-content-between bg-gradient rounded-3">
-              <Col>
-                <h2 className="mb-0 mt-2 text-center">
-                  {actualDay(Singleday)} {month[realMonth].toLowerCase()}
-                </h2>
-              </Col>
+            <div className="mb-4 bg-info bg-opacity-10 shadow-sm rounded-4 px-2">
+              <Row className="gap-2 mt-3 justify-content-between">
+                <Col>
+                  <h2 className="mb-2 mt-2 text-center">
+                    {actualDay(Singleday)} {month[realMonth].toLowerCase()}
+                  </h2>
+                </Col>
+              </Row>
               <Row>
-                {hoursOfDay.map((hour, i) => {
+                {hoursOfDayMorning.map((hour, i) => {
                   const filtering = filterHours(filterDays(Singleday), hour)[0]
                   return <SingleWeek filtering={filtering} index={i} />
                 })}
               </Row>
-            </Row>
+              <Row>
+                {hoursOfDayEvening.map((hour, i) => {
+                  const filtering = filterHours(filterDays(Singleday), hour)[0]
+                  return <SingleWeek filtering={filtering} index={i} />
+                })}
+              </Row>
+            </div>
           )
         })}
       </Container>
