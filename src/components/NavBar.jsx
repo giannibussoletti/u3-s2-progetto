@@ -5,15 +5,15 @@ const NavBar = function (props) {
   const [search, setSearch] = useState("Roma")
 
   return (
-    <Container className="mt-5">
+    <Container className="mb-5 position-sticky top-0">
       <Form>
         <Row className="justify-content-between">
           <Col sm="auto" className="p-0 flex-grow-1">
             <Form.Control
+              style={{ backdropFilter: "blur(10px)" }}
               type="text"
               placeholder="Che tempo fa li?"
               className=" mr-sm-2 w-100 bg-primary bg-opacity-25 border-1 border-light"
-              size="lg"
               value={search}
               onChange={(e) => {
                 setSearch(e.target.value)
@@ -23,14 +23,15 @@ const NavBar = function (props) {
           </Col>
           <Col className="p-0 d-flex justify-content-end">
             <Button
-              className="mt-2 mt-sm-0 bg-info bg-opacity-75 border-0"
+              style={{ backdropFilter: "blur(10px)" }}
+              className="mt-2 mt-sm-0 bg-info bg-opacity-75 border-0 px-4"
               type="submit"
               onClick={(e) => {
                 e.preventDefault()
                 props.todayWeather()
                 props.nextDaysWeather()
               }}>
-              Submit
+              CERCA
             </Button>
           </Col>
         </Row>
