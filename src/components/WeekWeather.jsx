@@ -45,7 +45,7 @@ const WeekWeather = function (props) {
   return (
     <div>
       <Container>
-        <Row className="mb-3 bg-secondary bg-opacity-50 align-items-center justify-content-center py-4 px-2 rounded-4">
+        <Row className="mb-5 bg-gradient align-items-center justify-content-center py-4 px-2 rounded-4">
           <Col className="d-flex justify-content-center">
             <div>
               <p className="m-0 text-secondary-emphasis" style={{ fontSize: ".9rem" }}>
@@ -74,7 +74,7 @@ const WeekWeather = function (props) {
             />
           </Col>
         </Row>
-        <Row className=" text-center bg-secondary bg-opacity-50 align-items-center justify-content-center py-4 px-2 rounded-4">
+        <Row className=" text-center bg-gradient align-items-center justify-content-center py-4 mb-5 px-2 rounded-4">
           <Col>
             <FontAwesomeIcon
               className="d-block m-auto mb-2"
@@ -111,7 +111,7 @@ const WeekWeather = function (props) {
       </Container>
       <Container>
         <Row className="gap-4 mt-3 justify-content-between">
-          <Col className="d-flex flex-column text-center bg-secondary bg-opacity-50 align-items-center justify-content-center py-4 px-2 rounded-3">
+          <Col className="d-flex flex-column text-center bg-gradient align-items-center justify-content-center py-4 px-2 rounded-3">
             <p>
               {the12HourTmrw[0].dt_txt.slice(8, 10)}{" "}
               {month[new Date().getMonth(the12HourTmrw[0].dt_txt)]}
@@ -133,7 +133,7 @@ const WeekWeather = function (props) {
               {the12HourTmrw[0].main.temp.toString().slice(0, 2)}°C
             </p>
           </Col>
-          <Col className="d-flex flex-column text-center bg-secondary bg-opacity-50 align-items-center justify-content-center py-4 px-2 rounded-3">
+          <Col className="d-flex flex-column text-center bg-gradient align-items-center justify-content-center py-4 px-2 rounded-3">
             <p>
               {the12Hour3Day[0].dt_txt.slice(8, 10)}{" "}
               {month[new Date().getMonth(the12Hour3Day[0].dt_txt)]}
@@ -155,7 +155,7 @@ const WeekWeather = function (props) {
               {the12Hour3Day[0].main.temp.toString().slice(0, 2)}°C
             </p>
           </Col>
-          <Col className="d-flex flex-column text-center bg-secondary bg-opacity-50 align-items-center justify-content-center py-4 px-2 rounded-3">
+          <Col className="d-flex flex-column text-center bg-gradient align-items-center justify-content-center py-4 px-2 rounded-3">
             <p>
               {the12Hour4Day[0].dt_txt.slice(8, 10)}{" "}
               {month[new Date().getMonth(the12Hour4Day[0].dt_txt)]}
@@ -177,7 +177,7 @@ const WeekWeather = function (props) {
               {the12Hour4Day[0].main.temp.toString().slice(0, 2)}°C
             </p>
           </Col>
-          <Col className="d-flex flex-column text-center bg-secondary bg-opacity-50 align-items-center justify-content-center py-4 px-2 rounded-3">
+          <Col className="d-flex flex-column text-center bg-gradient align-items-center justify-content-center py-4 px-2 rounded-3">
             <p>
               {the12Hour5Day[0].dt_txt.slice(8, 10)}{" "}
               {month[new Date().getMonth(the12Hour5Day[0].dt_txt)]}
