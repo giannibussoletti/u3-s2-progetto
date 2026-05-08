@@ -61,8 +61,8 @@ const App = function () {
 
   return (
     <div className="p-4">
-      <WeekWeather today={actualWeather} forecast={weekWeather} />
       <NavBar setCity={setCity} todayWeather={fetchingToday} nextDaysWeather={fetchingWeek} />
+      <WeekWeather today={actualWeather} forecast={weekWeather} />
     </div>
   )
 }

@@ -57,7 +57,7 @@ const WeekWeather = function (props) {
             <div className="mb-4 bg-info bg-opacity-10 shadow-sm rounded-4 px-2">
               <Row className="gap-2 mt-3 justify-content-between">
                 <Col>
-                  <h2 className="mb-2 mt-2 text-center">
+                  <h2 className=" my-3 text-center">
                     {actualDay(Singleday)} {month[realMonth].toLowerCase()}
                   </h2>
                 </Col>
