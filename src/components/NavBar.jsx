@@ -21,9 +21,10 @@ const NavBar = function (props) {
               }}
             />
           </Col>
-          <Col className="p-0 d-flex justify-content-end">
+          <Col className="p-0 d-flex justify-content-end ">
             <Button
               type="submit"
+              variant="light"
               onClick={(e) => {
                 e.preventDefault()
                 props.todayWeather()
