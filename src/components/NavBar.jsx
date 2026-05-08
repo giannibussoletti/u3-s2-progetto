@@ -10,13 +10,9 @@ const NavBar = function (props) {
         <Row className="justify-content-between">
           <Col sm="auto" className="p-0 flex-grow-1">
             <Form.Control
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))",
-              }}
               type="text"
               placeholder="Che tempo fa li?"
-              className=" mr-sm-2 w-100 border-1 border-light"
+              className=" mr-sm-2 w-100 bg-primary bg-opacity-25 border-1 border-light"
               size="lg"
               value={search}
               onChange={(e) => {
@@ -27,13 +23,8 @@ const NavBar = function (props) {
           </Col>
           <Col className="p-0 d-flex justify-content-end">
             <Button
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))",
-              }}
-              className="mt-2 mt-sm-0 text-light"
+              className="mt-2 mt-sm-0 bg-info bg-opacity-75 border-0"
               type="submit"
-              variant="light"
               onClick={(e) => {
                 e.preventDefault()
                 props.todayWeather()

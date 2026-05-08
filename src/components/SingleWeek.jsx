@@ -5,7 +5,7 @@ const SingleWeek = function (props) {
   return (
     <Col
       key={props.index}
-      className="d-flex flex-column text-center align-items-center justify-content-center pb-3 px-2">
+      className="d-flex flex-column text-center align-items-center justify-content-center pb-3">
       <div className="flex-grow-1">
         <Image
           fluid
@@ -22,7 +22,7 @@ const SingleWeek = function (props) {
         />
         {props.filtering.main.temp.toString().slice(0, 2)}°C
       </p>
-      <p>{props.filtering.dt_txt.slice(10, 16)}</p>
+      <p className="mb-0">{props.filtering.dt_txt.slice(10, 16)}</p>
     </Col>
   )
 }
