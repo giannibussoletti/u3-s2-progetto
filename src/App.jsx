@@ -58,7 +58,7 @@ const App = function () {
   }
 
   return (
-    <div className="px-4 my-4">
+    <div className="p-4">
       <h1 className="text-center mb-3" style={{ fontSize: "3rem" }}>
         {actualWeather.name}
       </h1>
