@@ -15,7 +15,7 @@ library.add(fas, far, fab)
 const API = "8b406c3892042818666868459003f69b&"
 
 const App = function () {
-  const [city, setCity] = useState("Verona")
+  const [city, setCity] = useState("Roma")
   const [actualWeather, setActualWeather] = useState()
   const [weekWeather, setWeekWeather] = useState()
 
@@ -59,12 +59,11 @@ const App = function () {
 
   return (
     <div className="px-4 my-4">
-      <h1 className="text-center mb-3 fw-bold" style={{ fontSize: "3rem" }}>
-        {actualWeather.name.toUpperCase()}
+      <h1 className="text-center mb-3" style={{ fontSize: "3rem" }}>
+        {actualWeather.name}
       </h1>
       <WeekWeather today={actualWeather} forecast={weekWeather} />
       <NavBar setCity={setCity} todayWeather={fetchingToday} nextDaysWeather={fetchingWeek} />
-      {console.log(city)}
     </div>
   )
 }
