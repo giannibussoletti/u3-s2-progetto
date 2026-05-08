@@ -22,7 +22,7 @@ const WeekWeather = function (props) {
   const hoursOfDayMorning = ["00:00:00", "03:00:00", "06:00:00", "09:00:00"]
   const hoursOfDayEvening = ["15:00:00", "18:00:00", "21:00:00"]
 
-  const numberOfDays = [1, 2, 3]
+  const numberOfDays = [1, 2, 3, 4]
 
   const nMonth = new Date().getMonth() + 1
   const actualMonth = month[new Date().getMonth()]
