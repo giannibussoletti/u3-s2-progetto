@@ -18,6 +18,7 @@ const App = function () {
   const [city, setCity] = useState("Roma")
   const [actualWeather, setActualWeather] = useState()
   const [weekWeather, setWeekWeather] = useState()
+  const windowWidth = window.innerWidth < 992
 
   const fetchingToday = () => {
     fetch(
@@ -60,9 +61,18 @@ const App = function () {
   }
 
   return (
-    <div className="p-4">
-      <NavBar setCity={setCity} todayWeather={fetchingToday} nextDaysWeather={fetchingWeek} />
-      <WeekWeather today={actualWeather} forecast={weekWeather} />
+    <div className="p-4 d-flex flex-column">
+      <div
+        className={
+          windowWidth
+            ? " order-1 order-lg-0 position-sticky bottom-0"
+            : "order-1 order-lg-0 position-sticky top-0"
+        }>
+        <NavBar setCity={setCity} todayWeather={fetchingToday} nextDaysWeather={fetchingWeek} />
+      </div>
+      <div className="order-0 order-lg-1">
+        <WeekWeather today={actualWeather} forecast={weekWeather} />
+      </div>
     </div>
   )
 }

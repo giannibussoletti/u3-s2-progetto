@@ -10,3 +10,36 @@ body {
 .today-weather-description {
   font-weight: 500;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hidden-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.single-carousel-left::before {
+  content: "";
+  width: 20%;
+  background: linear-gradient(90deg, #001b33 0%, #264d9200 100%);
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1rem;
+}
+.single-carousel-right::before {
+  content: "";
+  width: 20%;
+  background: linear-gradient(270deg, #001b33 0%, #264d9200 100%);
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 1rem;
+}
