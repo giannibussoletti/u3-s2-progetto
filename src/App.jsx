@@ -63,6 +63,7 @@ const App = function () {
   return (
     <div className="p-4 d-flex flex-column">
       <div
+        style={{ zIndex: "10" }}
         className={
           windowWidth
             ? " order-1 order-lg-0 position-sticky bottom-0"
