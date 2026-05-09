@@ -3,9 +3,9 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap"
 
 const NavBar = function (props) {
   const [search, setSearch] = useState("Roma")
-
+  console.log()
   return (
-    <Container className="mb-5 position-sticky top-0">
+    <Container className="mb-5 mt-lg-5">
       <Form>
         <Row className="justify-content-between">
           <Col sm="auto" className="p-0 flex-grow-1">

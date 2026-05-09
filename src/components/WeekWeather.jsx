@@ -19,8 +19,15 @@ const WeekWeather = function (props) {
     "Dicembre",
   ]
 
-  const hoursOfDayMorning = ["00:00:00", "03:00:00", "06:00:00", "09:00:00"]
-  const hoursOfDayEvening = ["15:00:00", "18:00:00", "21:00:00"]
+  const hoursOfDay = [
+    "00:00:00",
+    "03:00:00",
+    "06:00:00",
+    "09:00:00",
+    "15:00:00",
+    "18:00:00",
+    "21:00:00",
+  ]
 
   const numberOfDays = [1, 2, 3, 4]
 
@@ -54,7 +61,9 @@ const WeekWeather = function (props) {
       <Container className="p-0">
         {numberOfDays.map((Singleday) => {
           return (
-            <div className="mb-4 bg-info bg-opacity-10 shadow-sm rounded-4 px-2">
+            <div className="mb-4 bg-info bg-opacity-10 shadow-sm rounded-4 px-2 flex-nowrap position-relative">
+              <span className="d-inline d-md-none single-carousel-left rounded-4"></span>
+              <span className="d-inline d-md-none single-carousel-right rounded-4"></span>
               <Row className="gap-2 mt-3 justify-content-between">
                 <Col>
                   <h2 className=" my-3 text-center">
@@ -62,18 +71,16 @@ const WeekWeather = function (props) {
                   </h2>
                 </Col>
               </Row>
-              <Row>
-                {hoursOfDayMorning.map((hour, i) => {
-                  const filtering = filterHours(filterDays(Singleday), hour)[0]
-                  return <SingleWeek filtering={filtering} index={i} />
-                })}
-              </Row>
-              <Row>
-                {hoursOfDayEvening.map((hour, i) => {
-                  const filtering = filterHours(filterDays(Singleday), hour)[0]
-                  return <SingleWeek filtering={filtering} index={i} />
-                })}
-              </Row>
+              <div className=" overflow-scroll px-2 hidden-scrollbar">
+                <Row className="flex-nowrap m-0">
+                  <Col style={{ minWidth: "10%" }} className="d-block d-md-none"></Col>
+                  {hoursOfDay.map((hour, i) => {
+                    const filtering = filterHours(filterDays(Singleday), hour)[0]
+                    return <SingleWeek filtering={filtering} index={i} />
+                  })}
+                  <Col style={{ minWidth: "10%" }} className="d-block d-md-none"></Col>
+                </Row>
+              </div>
             </div>
           )
         })}

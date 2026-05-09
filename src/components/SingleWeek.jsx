@@ -14,13 +14,13 @@ const SingleWeek = function (props) {
           src={"./w-icon/" + props.filtering.weather[0].main.toLowerCase() + ".png"}
         />
       </div>
-      <p className="m-0">
+      <p className="m-0 d-flex flex-nowrap align-items-center" style={{ wordBreak: "none" }}>
         <FontAwesomeIcon
           size="sm"
           icon="fa-solid fa-temperature-full"
           style={{ color: "rgb(255, 255, 255)" }}
         />
-        {props.filtering.main.temp.toString().slice(0, 2)}°C
+        {props.filtering.main.temp.toString().slice(0, 4)}°C
       </p>
       <p className="mb-0">{props.filtering.dt_txt.slice(10, 16)}</p>
     </Col>
